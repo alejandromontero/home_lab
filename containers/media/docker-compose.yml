@@ -1,0 +1,21 @@
+version: "3.9"
+name: media-stack
+services:
+   radarr:
+    container_name: radarr
+    image: lscr.io/linuxserver/radarr:latest
+    networks:
+      - media   # Comment this line if VPN is enabled
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=CET
+    ports:
+      - 7878:7878
+    volumes:
+      - ${RADARR_CONFIG_PATH}:/config
+      - ${MEDIA_PATH}:/Media
+    restart: "unless-stopped"
+      
+networks:
+  media:
