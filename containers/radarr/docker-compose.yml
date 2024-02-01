@@ -2,7 +2,7 @@ version: "3.9"
 name: media-stack
 services:
    radarr:
-    container_name: ${RADARR_NAME}
+    container_name: Radarr
     image: lscr.io/linuxserver/radarr:latest
     networks:
       - media   # Comment this line if VPN is enabled
