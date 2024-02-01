@@ -1,0 +1,20 @@
+version: "3.9"
+name: Prowlarr
+services:
+   radarr:
+    container_name: Prowlarr
+    image: linuxserver/prowlarr:latest
+    networks:
+      - media   # Comment this line if VPN is enabled
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=CET
+    ports:
+      - 9696:9696
+    volumes:
+      - ${CONFIG_PATH}:/config
+    restart: "unless-stopped"
+      
+networks:
+  media:
