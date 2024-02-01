@@ -1,5 +1,5 @@
 version: "3.9"
-name: media-stack
+name: radarr_stack
 services:
    radarr:
     container_name: Radarr

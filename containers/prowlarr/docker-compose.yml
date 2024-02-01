@@ -1,5 +1,5 @@
 version: "3.9"
-name: Prowlarr
+name: prowlarr_stack
 services:
    radarr:
     container_name: Prowlarr
