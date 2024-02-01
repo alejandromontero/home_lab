@@ -13,7 +13,7 @@ services:
     ports:
       - 7878:7878
     volumes:
-      - ${RADARR_CONFIG_PATH}:/config
+      - ${CONFIG_PATH}:/config
       - ${MEDIA_PATH}:/Media
     restart: "unless-stopped"
       
