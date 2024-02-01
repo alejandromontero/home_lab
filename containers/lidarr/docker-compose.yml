@@ -1,0 +1,24 @@
+version: "3.9"
+name: lidarr_stack
+services:
+    lidarr:
+    container_name: lidarr
+    image: linuxserver/lidarr:latest
+
+    networks:               
+      - default           
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=CET
+    volumes:
+      - ${CONFIG_PATH}:/config
+      - ${MEDIA_PATH}:/Media
+    ports:
+      - 8686:8686
+    restart: "unless-stopped"
+
+networks:
+  default:
+    external: true
+    name: ${NETWORK}

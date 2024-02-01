@@ -1,0 +1,27 @@
+version: "3.9"
+name: qbittorrent-stack
+services:
+  qbittorrent:
+    container_name: qbittorrent
+    image: lscr.io/linuxserver/qbittorrent:latest
+    networks:
+      - default
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=CET
+      - WEBUI_PORT=5080
+    volumes:
+      - ${CONFIG_PATH}:/config
+      - ${MEDIA_PATH}:/Media
+
+    ports:
+      - 5080:5080
+      - 6881:6881
+      - 6881:6881/udp
+    restart: "unless-stopped"
+
+networks:
+  default:
+    external: true
+    name: ${NETWORK}

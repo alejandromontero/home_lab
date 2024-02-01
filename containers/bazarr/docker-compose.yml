@@ -1,0 +1,23 @@
+version: "3.9"
+name: bazarr_stack
+services:
+    bazarr:
+    image: lscr.io/linuxserver/bazarr:latest
+    container_name: bazarr
+    networks:
+      - default
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=CET
+    volumes:
+      - ${CONFIG_PATH}:/config
+      - ${MEDIA_PATH}:/Media
+    ports:
+      - 6767:6767
+    restart: "unless-stopped"
+
+networks:
+  default:
+    external: true
+    name: ${NETWORK}
