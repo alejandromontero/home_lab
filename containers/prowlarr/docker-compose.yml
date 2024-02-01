@@ -5,7 +5,7 @@ services:
     container_name: Prowlarr
     image: linuxserver/prowlarr:latest
     networks:
-      - ${NETWORK}
+      - default
     environment:
       - PUID=1000
       - PGID=1000
@@ -17,4 +17,6 @@ services:
     restart: "unless-stopped"
       
 networks:
-  ${NETWORK}:
+  default:
+    external: true
+    name: ${NETWORK}
