@@ -15,7 +15,7 @@ services:
       - ${MEDIA_PATH}:/Media
     ports:
       - 6767:6767
-    restart: "unless-stopped"
+    restart: "no"
 
 networks:
   default:

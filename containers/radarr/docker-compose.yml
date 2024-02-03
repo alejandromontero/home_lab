@@ -15,7 +15,7 @@ services:
     volumes:
       - ${CONFIG_PATH}:/config
       - ${MEDIA_PATH}:/Media
-    restart: "unless-stopped"
+    restart: "no"
       
 networks:
   default:

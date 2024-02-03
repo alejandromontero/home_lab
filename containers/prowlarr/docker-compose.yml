@@ -14,7 +14,7 @@ services:
       - 9696:9696
     volumes:
       - ${CONFIG_PATH}:/config
-    restart: "unless-stopped"
+    restart: "no"
       
 networks:
   default:

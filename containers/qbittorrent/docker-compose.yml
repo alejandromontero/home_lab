@@ -19,7 +19,7 @@ services:
       - 5080:5080
       - 6881:6881
       - 6881:6881/udp
-    restart: "unless-stopped"
+    restart: "no"
 
 networks:
   default:
