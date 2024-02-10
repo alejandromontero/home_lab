@@ -1,0 +1,8 @@
+    - name: Mount disks
+      ansible.posix.mount:
+        path: "{{ item.mount }}"
+        src: "UUID={{ item.UUID }}"
+        fstype: "{{ item.fstype }}"
+        opts: nofail,noatime
+        state: mounted
+      loop: "{{ disks }}"

@@ -1,0 +1,26 @@
+---
+
+- hosts: all
+  vars_files:
+    - vars/users.yml
+  become: yes
+  roles:
+    - configure_ssh
+    - ansible-role-create-users
+    - ansible-role-mount-storage
+    - ansible-role-create-swap
+
+- hosts: services
+  become: yes
+  vars_files:
+      - vars/portainer.yml
+      - vars/servers_common.yml
+  roles:
+    - ansible-role-docker
+    - ansible-role-portainer
+    - ansible-role-configure-portainer
+
+- hosts: NAS
+  become: yes
+  roles:
+    - ansible-role-nfs

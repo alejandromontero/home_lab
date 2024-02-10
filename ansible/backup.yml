@@ -1,0 +1,9 @@
+---
+
+- hosts: services
+  become: yes
+  vars_files:
+      - vars/portainer.yml
+      - vars/servers_common.yml
+  roles:
+    - ansible-role-backup-services

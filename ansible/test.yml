@@ -1,0 +1,6 @@
+---
+- name: My first play
+  hosts: server01
+  become: yes
+  task:
+    - shell: echo 'test'

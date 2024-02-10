@@ -1,0 +1,25 @@
+---
+NAS_folder: /mnt/disk1/NAS
+Media_folder: "{{ NAS_folder }}/Media"
+AppData_folder: /mnt/disk1/AppData
+AppConfig_folder: /mnt/disk2/AppConfig
+AppCache_folder: /mnt/disk1/AppCache
+
+disks:
+  - UUID: "e5e75e90-fde4-4964-85b5-4a9f76bbba80"
+    mount: "/mnt/disk1"
+    fstype: "ext4"
+    
+swap_files:
+  - path: "/mnt/disk1/.swap"
+    size: "2G"
+
+services:
+  - radarr
+  - prowlarr
+  - sonarr
+  - lidarr
+  - bazarr
+  - jellyfin
+  - qbittorrent
+  - synchthing

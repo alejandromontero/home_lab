@@ -1,0 +1,17 @@
+services:
+  hosts:
+    zeus: 
+      ansible_host: 192.168.1.71
+      ansible_user: admin
+  vars: 
+    AppData: /mnt/disk1/AppData
+    AppConfig: /mnt/disk1/AppConfig
+
+NAS:
+  hosts:
+    zeus:
+      server01:
+        ansible_host: 192.168.1.71
+        ansible_user: admin
+  vars:
+    nfs_exports: [ "/mnt/disk1/NAS *(rw,async,no_root_squash)" ]

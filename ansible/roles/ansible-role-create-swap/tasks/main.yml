@@ -1,0 +1,4 @@
+- include_tasks: create_swap.yml
+  when: swap_files is defined
+  loop: "{{ swap_files  }}"
+
