@@ -1,0 +1,20 @@
+version: '3'
+services:
+  homeassistant:
+    container_name: homeassistant
+    image: "ghcr.io/home-assistant/home-assistant:stable"
+    networks:
+      - home_assistant_net
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=CET
+    volumes:
+      - /Users/montera5/Local/home_server/containers_local/config/home_assistant:/config
+      - /etc/localtime:/etc/localtime:ro
+      - /run/dbus:/run/dbus:ro
+    restart: "unless-stopped"
+      #privileged: true
+  
+networks:
+  home_assistant_net:
