@@ -2,7 +2,7 @@ version: "3.9"
 name: jellyfin_stack
 services:
   jellyfin:
-    image: jellyfin/jellyfin
+    image: lscr.io/linuxserver/jellyfin:latest
     container_name: jellyfin
     networks:
       - default
