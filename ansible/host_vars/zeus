@@ -2,12 +2,12 @@
 NAS_folder: /mnt/disk1/NAS
 Media_folder: "{{ NAS_folder }}/Media"
 AppData_folder: /mnt/disk1/AppData
-AppConfig_folder: /mnt/disk2/AppConfig
+AppConfig_folder: /mnt/disk1/AppConfig
 AppCache_folder: /mnt/disk1/AppCache
 
 disks:
-  - UUID: "e5e75e90-fde4-4964-85b5-4a9f76bbba80"
-    mount: "/mnt/disk1"
+  - UUID: "c4b84407-9dc5-451e-880b-4d10e75893c9"
+    mount: "/mnt/disk2"
     fstype: "ext4"
     
 swap_files:

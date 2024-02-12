@@ -1,6 +1,6 @@
 ---
-remove_existing_container: true
-remove_persistent_data: true
+#remove_existing_container: true
+#remove_persistent_data: true
 container_image: portainer/portainer-ce:alpine
 persistent_data_path: "{{ AppData }}/portainer:/data"
 admin_user: admin 

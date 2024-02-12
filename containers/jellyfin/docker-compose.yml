@@ -17,6 +17,8 @@ services:
     ports:
       - "8096:8096"
     restart: "no"
+    devices:
+      - /dev/dri/renderD128:/dev/dri/renderD128
 
 networks:
   default:
