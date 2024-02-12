@@ -10,6 +10,7 @@ services:
       - PUID=1000
       - PGID=105
       - TZ=CET
+      - DOCKER_MODS=linuxserver/mods:jellyfin-opencl-intel
     volumes:
       - ${CONFIG_PATH}:/config
       - ${CACHE_PATH}:/cache
