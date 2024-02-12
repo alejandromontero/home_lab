@@ -8,10 +8,8 @@ services:
       - default
     environment:
       - PUID=1000
-      - PGID=1000
+      - PGID=105
       - TZ=CET
-    supplementalGroups:
-      - "105"
     volumes:
       - ${CONFIG_PATH}:/config
       - ${CACHE_PATH}:/cache

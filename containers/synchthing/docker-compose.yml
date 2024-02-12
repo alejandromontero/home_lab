@@ -10,8 +10,6 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=CET
-    supplementalGroups:
-      - "1002"
     volumes:
       - ${CONFIG_PATH}:/config
       - ${NAS_PATH}:/data
