@@ -1,4 +1,5 @@
-version: '3'
+version: '3.9'
+name: home_assistant
 services:
   homeassistant:
     container_name: homeassistant
