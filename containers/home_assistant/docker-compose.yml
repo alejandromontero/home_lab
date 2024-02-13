@@ -4,8 +4,7 @@ services:
   homeassistant:
     container_name: homeassistant
     image: "ghcr.io/home-assistant/home-assistant:stable"
-    networks:
-      - default
+    network_mode: "host"        
     environment:
       - PUID=1000
       - PGID=1000
@@ -18,8 +17,3 @@ services:
       - 8123:8123
     restart: "unless-stopped"
       #privileged: true
-  
-networks:
-  default:
-    external: true
-    name: ${NETWORK}
