@@ -39,5 +39,6 @@ networks:
     external: true
     name: ${NETWORK}
   nextcloud-aio:
-     name: nextcloud-aio # This line is not allowed to be changed as otherwise the created network will not be used by the other containers of AIO
-     driver: bridge
+    external: true
+    name: nextcloud-aio # This line is not allowed to be changed as otherwise the created network will not be used by the other containers of AIO
+    driver: bridge
