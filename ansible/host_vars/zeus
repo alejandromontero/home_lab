@@ -4,6 +4,7 @@ Media_folder: "{{ NAS_folder }}/Media"
 AppData_folder: /mnt/Internal_ssd_1/AppData
 AppConfig_folder: /mnt/Internal_ssd_1/AppConfig
 AppCache_folder: /mnt/Internal_ssd_1/AppCache
+UserData_folder: "{{ NAS_folder }}/UserData"
 
 swap_files:
   - path: "/mnt/Internal_ssd_1/.swap"
