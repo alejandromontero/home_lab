@@ -1,18 +1,13 @@
 ---
-NAS_folder: /mnt/disk1/NAS
+NAS_folder: /mnt/Merged_all/NAS
 Media_folder: "{{ NAS_folder }}/Media"
-AppData_folder: /mnt/disk1/AppData
-AppConfig_folder: /mnt/disk1/AppConfig
-AppCache_folder: /mnt/disk1/AppCache
+AppData_folder: /mnt/Internal_ssd_1/AppData
+AppConfig_folder: /mnt/Internal_ssd_1/AppConfig
+AppCache_folder: /mnt/Internal_ssd_1/AppCache
 
-disks:
-  - UUID: "c4b84407-9dc5-451e-880b-4d10e75893c9"
-    mount: "/mnt/disk2"
-    fstype: "ext4"
-    
 swap_files:
-  - path: "/mnt/disk1/.swap"
-    size: "2G"
+  - path: "/mnt/Internal_ssd_1/.swap"
+    size: "4G"
 
 services:
   - radarr
@@ -23,3 +18,5 @@ services:
   - jellyfin
   - qbittorrent
   - synchthing
+  - home_assistant
+  - mariadb
