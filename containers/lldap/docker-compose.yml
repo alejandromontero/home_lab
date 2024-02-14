@@ -12,7 +12,7 @@ services:
       - "17170:17170"
     networks:
       - default
-      - nextcloud
+      - nextcloud-aio
     volumes:
       - "${CONFIG_PATH}:/data"
       # Alternatively, you can mount a local folder
