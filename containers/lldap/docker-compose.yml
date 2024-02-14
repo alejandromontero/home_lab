@@ -20,9 +20,10 @@ services:
       - UID1000
       - GID1000
       - TZ=CET
-      #- LLDAP_JWT_SECRET=REPLACE_WITH_RANDOM
-      #- LLDAP_KEY_SEED=REPLACE_WITH_RANDOM
-      #- LLDAP_LDAP_BASE_DN=dc=example,dc=com
+      - LLDAP_JWT_SECRET=${JWT_SECRET}
+      - LLDAP_KEY_SEED=${SEED}
+      - LLDAP_LDAP_BASE_DN=dc=almr
+      - LLDAP_LDAP_USER_PASS=${ADMIN_PASSWORD}
       # If using LDAPS, set enabled true and configure cert and key path
       # - LLDAP_LDAPS_OPTIONS__ENABLED=true
       # - LLDAP_LDAPS_OPTIONS__CERT_FILE=/path/to/certfile.crt
