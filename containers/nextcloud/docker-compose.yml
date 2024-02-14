@@ -37,6 +37,8 @@ services:
       # - nextcloud-aio # Is needed when you want to create the nextcloud-aio network with ipv6-support using this file, see the network config at the bottom of the file
     # # Uncomment the following line when using SELinux
     # security_opt: ["label:disable"]
+    devices:
+      - /dev/dri:/dev/dri
 
   # # Optional: Caddy reverse proxy. See https://github.com/nextcloud/all-in-one/blob/main/reverse-proxy.md
   # # You can find further examples here: https://github.com/nextcloud/all-in-one/discussions/588
