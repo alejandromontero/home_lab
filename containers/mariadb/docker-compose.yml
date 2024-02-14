@@ -2,7 +2,10 @@ version: "3.9"
 name: mariadb
 services:
   db:
+    container_name: mariadb
     image: mariadb:latest
+    networks:
+      - default
     environment:
       MYSQL_ROOT_PASSWORD: ${MDB_root_pswd}
       MYSQL_DATABASE: ${MDB_DB}
@@ -13,3 +16,8 @@ services:
     ports:
       - "3306:3306"
     restart: "always"
+
+networks:
+  default:
+    external: true
+    name: ${NETWORK}
