@@ -21,4 +21,5 @@ services:
   - synchthing
   - home_assistant
   - mariadb
-  - nextcloud
+  #- nextcloud
+  - nginx_proxy_manager	
