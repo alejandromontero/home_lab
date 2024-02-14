@@ -21,3 +21,4 @@ services:
   - synchthing
   - home_assistant
   - mariadb
+  - nextcloud
