@@ -2,7 +2,7 @@ version: "3.9"
 name: "lldap"
 services:
   lldap:
-    image: lldap/lldap:stable
+    image: lldap/lldap:latest
     ports:
       # For LDAP, not recommended to expose, see Usage section.
       #- "3890:3890"
@@ -23,7 +23,7 @@ services:
       - TZ=CET
       - LLDAP_JWT_SECRET=${JWT_SECRET}
       - LLDAP_KEY_SEED=${SEED}
-      - LLDAP_LDAP_BASE_DN=dc=almr
+      - LLDAP_LDAP_BASE_DN=dc=almr,dc=com
       - LLDAP_LDAP_USER_DN=admin
       - LLDAP_LDAP_USER_PASS=${ADMIN_PASSWORD}
       # If using LDAPS, set enabled true and configure cert and key path
