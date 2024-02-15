@@ -24,3 +24,4 @@ services:
   - nextcloud
   - nginx_proxy_manager	
   - lldap
+  - jellyseerr

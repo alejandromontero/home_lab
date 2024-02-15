@@ -1,0 +1,21 @@
+version: '3.9'
+name: "jellyseerr"
+services:
+    jellyseerr:
+       image: fallenbagel/jellyseerr:latest
+       container_name: jellyseerr
+       networks:
+            - default
+       environment:
+            - LOG_LEVEL=debug
+            - TZ=CET
+       ports:
+            - 5055:5055
+       volumes:
+            - ${CONFIG_PATH}:/app/config
+       restart: unless-stopped
+       
+networks:
+  default:
+    external: true
+    name: ${NETWORK}
