@@ -9,7 +9,7 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ='Europe/Madrid'
+      - TZ="Europe/Madrid"
     ports:
       - 7878:7878
     volumes:
