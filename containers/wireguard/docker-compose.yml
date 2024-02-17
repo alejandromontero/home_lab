@@ -12,7 +12,7 @@ services:
       - PGID=1000
       - TZ="Europe/Madrid"
 #      - SERVERURL=wireguard.domain.com #optional
-#      - SERVERPORT=49300 #optional
+      - SERVERPORT=49300 #optional
       - PEERS=${VPN_PEERS}
 #      - PEERDNS=auto #optional
 #      - INTERNAL_SUBNET=10.13.13.0 #optional

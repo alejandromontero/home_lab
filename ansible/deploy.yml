@@ -18,6 +18,7 @@
       - vars/mariadb.yml
       - vars/lldap.yml
       - vars/pihole.yml
+      - vars/wireguard.yml  
   roles:
     #- ansible-role-docker
     - ansible-role-portainer
