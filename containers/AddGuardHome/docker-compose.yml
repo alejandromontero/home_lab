@@ -1,0 +1,23 @@
+version: "3.9"
+name: adguardhome
+services:
+  wireguard:
+    image: adguard/adguardhome:latest
+    container_name: adguardhome
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ="Europe/Madrid"   
+    volumes:
+      - ${CONFIG_PATH}/work:/opt/adguardhome/work\
+      - ${CONFIG_PATH}/conf:/opt/adguardhome/conf\
+    ports:
+      - 53:53/udp
+      - 67:67/udp 
+      - 68:68/tcp 
+      - 68:68/udp 
+      - 4155:80/tcp 
+      - 4156:443/tcp 
+      - 853:853/tcp 
+      - 3000:3000/tcp 
+    restart: unless-stopped
