@@ -13,7 +13,7 @@ services:
       - TZ="Europe/Madrid"
 #      - SERVERURL=wireguard.domain.com #optional
 #      - SERVERPORT=49300 #optional
-      - PEERS=alejandro-mac,alejandro-iphonepers,laura-mac,laura-iphone #optional
+      - PEERS=${VPN_PEERS}
 #      - PEERDNS=auto #optional
 #      - INTERNAL_SUBNET=10.13.13.0 #optional
       - ALLOWEDIPS=0.0.0.0/0 #optional

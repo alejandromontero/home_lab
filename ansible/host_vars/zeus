@@ -26,3 +26,4 @@ services:
   - lldap
   - jellyseerr
   - pihole
+  - wireguard
