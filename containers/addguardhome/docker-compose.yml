@@ -4,6 +4,7 @@ services:
   wireguard:
     image: adguard/adguardhome:latest
     container_name: adguardhome
+    network_mode: "host"        
     environment:
       - PUID=1000
       - PGID=1000
