@@ -15,6 +15,7 @@ services:
       - TZ='Europe/Madrid'
       - WEBPASSWORD=${PIHOLE_PASS}
       - WEB_PORT=4154
+      - DNSMASQ_LISTENING=all
     # Volumes store your data between container upgrades
     volumes:
       - ${CONFIG_PATH}/conf:/etc/pihole
