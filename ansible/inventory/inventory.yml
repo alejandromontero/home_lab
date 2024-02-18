@@ -1,7 +1,7 @@
 services:
   hosts:
     zeus: 
-      ansible_host: 192.168.69.70
+      ansible_host: 192.168.70.70
       ansible_user: admin_user
   vars: 
     AppData: /mnt/disk1/AppData
