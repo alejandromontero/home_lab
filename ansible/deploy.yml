@@ -21,7 +21,7 @@
       - vars/wireguard.yml  
   roles:
     #- ansible-role-docker
-    - ansible-role-portainer
+#    - ansible-role-portainer
     - ansible-role-configure-portainer
 
 #- hosts: NAS

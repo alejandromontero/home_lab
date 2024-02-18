@@ -12,12 +12,12 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ="Europe/Madrid"
-#      - SERVERURL=wireguard.domain.com #optional
+      - SERVERURL=82.66.168.35
       - SERVERPORT=49300 #optional
       - PEERS=${VPN_PEERS}
-      - PEERDNS=192.168.1.70 #optional
+      - PEERDNS=192.168.69.70 #optional
       - INTERNAL_SUBNET=10.13.13.0 #optional
-      - ALLOWEDIPS=0.0.0.0/0, 192.168.69.0/24 #optional
+      - ALLOWEDIPS=0.0.0.0/0, 192.168.69.0/24, 10.13.13.0/24 #optional
       - PERSISTENTKEEPALIVE_PEERS=all #optional
       - LOG_CONFS=true #optional
     volumes:
