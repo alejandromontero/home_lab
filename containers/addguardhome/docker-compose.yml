@@ -1,7 +1,7 @@
 version: "3.9"
 name: adguardhome
 services:
-  wireguard:
+  adguard:
     image: adguard/adguardhome:latest
     container_name: adguardhome
     network_mode: "host"        
@@ -10,8 +10,8 @@ services:
       - PGID=1000
       - TZ="Europe/Madrid"   
     volumes:
-      - ${CONFIG_PATH}/work:/opt/adguardhome/work\
-      - ${CONFIG_PATH}/conf:/opt/adguardhome/conf\
+      - ${CONFIG_PATH}/work:/opt/adguardhome/work
+      - ${CONFIG_PATH}/conf:/opt/adguardhome/conf
     ports:
       - 53:53/udp
       - 53:53/tcp

@@ -1,7 +1,7 @@
 services:
   hosts:
     zeus: 
-      ansible_host: 192.168.1.70
+      ansible_host: 192.168.69.70
       ansible_user: admin_user
   vars: 
     AppData: /mnt/disk1/AppData
@@ -11,7 +11,7 @@ NAS:
   hosts:
     zeus:
       server01:
-        ansible_host: 192.168.1.70
+        ansible_host: 192.168.69.70
         ansible_user: admin_user
   vars:
-    nfs_exports: [ "/mnt/disk1/NAS *(rw,async,no_root_squash)" ]
+    nfs_exports: [ "/mnt/Merged_all/NAS *(rw,async,no_root_squash)" ]

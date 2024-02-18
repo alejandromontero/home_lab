@@ -17,7 +17,7 @@ services:
       - PEERS=${VPN_PEERS}
       - PEERDNS=192.168.1.70 #optional
       - INTERNAL_SUBNET=10.13.13.0 #optional
-      - ALLOWEDIPS=0.0.0.0/0, 192.168.1.0/24 #optional
+      - ALLOWEDIPS=0.0.0.0/0, 192.168.69.0/24 #optional
       - PERSISTENTKEEPALIVE_PEERS=all #optional
       - LOG_CONFS=true #optional
     volumes:
