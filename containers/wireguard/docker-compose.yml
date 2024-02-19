@@ -4,7 +4,6 @@ services:
   wireguard:
     image: lscr.io/linuxserver/wireguard:latest
     container_name: wireguard
-    network_mode: "host"        
     cap_add:
       - NET_ADMIN
       - SYS_MODULE #optional
@@ -15,7 +14,7 @@ services:
       - SERVERURL=82.66.168.35
       - SERVERPORT=49300 #optional
       - PEERS=${VPN_PEERS}
-#      - PEERDNS=192.168.69.70 #optional
+      - PEERDNS=192.168.70.70 #optional
       - INTERNAL_SUBNET=192.168.85.0 #optional
 #      - ALLOWEDIPS=0.0.0.0/0 #optional
       - PERSISTENTKEEPALIVE_PEERS=all #optional
