@@ -3,9 +3,6 @@ services:
     zeus: 
       ansible_host: 192.168.70.70
       ansible_user: admin_user
-  vars: 
-    AppData: /mnt/disk1/AppData
-    AppConfig: /mnt/disk1/AppConfig
 
 NAS:
   hosts:

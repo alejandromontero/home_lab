@@ -14,13 +14,12 @@
   become: yes
   vars_files:
       - vars/portainer.yml
-      - vars/servers_common.yml
       - vars/mariadb.yml
       - vars/lldap.yml
       - vars/pihole.yml
       - vars/wireguard.yml  
   roles:
-    #- ansible-role-docker
+#    - ansible-role-docker
 #    - ansible-role-portainer
     - ansible-role-configure-portainer
 

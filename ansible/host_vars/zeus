@@ -22,9 +22,9 @@ services:
 #  - home_assistant
 #  - mariadb
 #  - nextcloud
-#  - nginx_proxy_manager	
+  - nginx_proxy_manager	
 #  - lldap
 #  - jellyseerr
 #  - pihole
-  - wireguard
+#  - wireguard
 #  - addguardhome
