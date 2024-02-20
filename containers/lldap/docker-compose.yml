@@ -12,7 +12,7 @@ services:
       - "17170:17170"
     networks:
       - default
-      - nextcloud-aio
+      - ldap_network
     volumes:
       - "${CONFIG_PATH}:/data"
       # Alternatively, you can mount a local folder
@@ -38,7 +38,6 @@ networks:
   default:
     external: true
     name: ${NETWORK}
-  nextcloud-aio:
-    external: true
-    name: nextcloud-aio # This line is not allowed to be changed as otherwise the created network will not be used by the other containers of AIO
+  ldap_network:
+    name: ldap_network # This line is not allowed to be changed as otherwise the created network will not be used by the other containers of AIO
     driver: bridge
