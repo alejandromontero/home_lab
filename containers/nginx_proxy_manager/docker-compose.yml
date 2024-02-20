@@ -9,5 +9,5 @@ services:
       - '81:81'
       - '443:443'
     volumes:
-      - ${CONFIG_PATH}:/data
-      - ${APP_DATA}:/etc/letsencrypt
+      - ${CONFIG_PATH}/conf:/data
+      - ${CONFIG_PATH}/letsencrypt:/etc/letsencrypt
