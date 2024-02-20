@@ -6,6 +6,7 @@ services:
     image: mariadb:latest
     networks:
       - default
+      - ldap_network
     environment:
       MYSQL_ROOT_PASSWORD: ${MDB_root_pswd}
       MYSQL_DATABASE: ${MDB_DB}
