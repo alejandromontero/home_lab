@@ -31,7 +31,7 @@ services:
       # - LLDAP_LDAPS_OPTIONS__CERT_FILE=/path/to/certfile.crt
       # - LLDAP_LDAPS_OPTIONS__KEY_FILE=/path/to/keyfile.key
       # You can also set a different database:
-      - LLDAP_DATABASE_URL=mysql://${MDB_user}:${MDB_pswd}@{MARIADB_IP}/ldap
+      - LLDAP_DATABASE_URL=mysql://${MDB_user}:${MDB_pswd}@${MARIADB_IP}/ldap
       #- LLDAP_DATABASE_URL=postgres://postgres-user:password@postgres-server/my-database
 
 networks:
