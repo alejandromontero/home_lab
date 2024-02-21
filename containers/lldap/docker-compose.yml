@@ -42,4 +42,3 @@ networks:
   nextcloud-aio:
     external: true
     name: nextcloud-aio
-    driver: bridge
