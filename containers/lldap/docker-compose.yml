@@ -12,7 +12,6 @@ services:
       - "17170:17170"
     networks:
       - default
-      - ldap_network
       - nextcloud-aio
     volumes:
       - "${CONFIG_PATH}:/data"
