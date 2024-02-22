@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  autobrr:
+    container_name: autobrr
+    image: ghcr.io/autobrr/autobrr:latest
+    restart: unless-stopped
+    networks:
+      - default
+    #logging:
+    #  driver: json-file
+    #  options:
+    #    max-file: ${DOCKERLOGGING_MAXFILE}
+    #    max-size: ${DOCKERLOGGING_MAXSIZE}
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Madrid
+    volumes:
+      - ${CONFIG_PATH}/autobrr/config:/config
+    ports:
+      - 7474:7474
+
+networks:
+  default:
+    external: true
+    name: ${NETWORK}

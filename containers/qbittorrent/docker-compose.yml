@@ -9,7 +9,7 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=CET
+      - TZ=Europe/Madrid
       - WEBUI_PORT=5080
     volumes:
       - ${CONFIG_PATH}:/config
