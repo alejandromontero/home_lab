@@ -5,10 +5,10 @@
     - vars/users.yml
   become: yes
   roles:
-    #- configure_ssh
-    #- ansible-role-create-users
-      # - ansible-role-mount-storage
-      #- ansible-role-create-swap
+    - configure_ssh
+    - ansible-role-create-users
+    # - ansible-role-mount-storage
+     - ansible-role-create-swap
 
 - hosts: services
   become: yes
@@ -19,11 +19,11 @@
       - vars/pihole.yml
       - vars/wireguard.yml  
   roles:
-#    - ansible-role-docker
-#    - ansible-role-portainer
+    - ansible-role-docker
+    - ansible-role-portainer
     - ansible-role-configure-portainer
 
-#- hosts: NAS
-#  become: yes
-#  roles:
-#    - ansible-role-nfs
+- hosts: NAS
+  become: yes
+  roles:
+    - ansible-role-nfs
