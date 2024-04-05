@@ -1,6 +1,6 @@
 ---
 NAS_folder: /mnt/Merged_all/NAS
-Media_folder: "{{ NAS_folder }}/Media"
+Media_folder: "/mnt/External_hhd_1/Media"
 AppData_folder: /mnt/Internal_ssd_1/AppData
 AppConfig_folder: /mnt/Internal_ssd_1/AppConfig
 AppCache_folder: /mnt/Internal_ssd_1/AppCache
