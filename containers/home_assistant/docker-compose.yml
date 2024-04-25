@@ -15,5 +15,6 @@ services:
       - /run/dbus:/run/dbus:ro
     ports:
       - 8123:8123
+      - 5683:5683
     restart: "unless-stopped"
       #privileged: true
