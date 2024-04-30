@@ -13,22 +13,22 @@ swap_files:
     size: "4G"
 
 services:
-  - radarr
-  - prowlarr
-  - sonarr
-  - lidarr
-  - bazarr
-  - jellyfin
-  - qbittorrent
-  - synchthing
-  - home_assistant
-  - mariadb
-  - nextcloud
-  - nginx_proxy_manager	
-  - lldap
-  - jellyseerr
+#  - radarr
+#  - prowlarr
+#  - sonarr
+#  - lidarr
+#  - bazarr
+#  - jellyfin
+#  - qbittorrent
+#  - synchthing
+#  - home_assistant
+#  - mariadb
+#  - nextcloud
+#  - nginx_proxy_manager	
+#  - lldap
+#  - jellyseerr
 #  - pihole
-  - wireguard
-  - addguardhome
-  - autobrr
-#  - immich
+#  - wireguard
+#  - addguardhome
+#  - autobrr
+  - immich
