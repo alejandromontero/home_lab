@@ -1,6 +1,7 @@
 ---
 NAS_folder: /mnt/Merged_all/NAS
 Media_folder: "/mnt/External_hhd_1/Media"
+Photos_folder: "/mnt/Merged_all/NAS/Photos"
 AppData_folder: /mnt/Internal_ssd_1/AppData
 AppConfig_folder: /mnt/Internal_ssd_1/AppConfig
 AppCache_folder: /mnt/Internal_ssd_1/AppCache
@@ -30,3 +31,4 @@ services:
   - wireguard
   - addguardhome
   - autobrr
+  - immich
