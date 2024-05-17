@@ -6,7 +6,7 @@ AppData_folder: /mnt/Internal_ssd_1/AppData
 AppConfig_folder: /mnt/Internal_ssd_1/AppConfig
 AppCache_folder: /mnt/Internal_ssd_1/AppCache
 UserData_folder: "{{ NAS_folder }}/UserData"
-MariaDB_IP: "192.168.70.70"
+MariaDB_IP: "10.10.5.50"
 
 swap_files:
   - path: "/mnt/Internal_ssd_1/.swap"
@@ -25,7 +25,7 @@ services:
 #  - mariadb
 #  - nextcloud
 #  - nginx_proxy_manager	
-#  - lldap
+  - lldap
 #  - jellyseerr
 #  - pihole
 #  - wireguard

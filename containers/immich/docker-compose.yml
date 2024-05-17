@@ -22,6 +22,8 @@ services:
       - redis
       - database
     restart: always
+    labels:
+      - "com.centurylinklabs.watchtower.enable=false"
 
   immich-microservices:
     container_name: immich_microservices
@@ -37,6 +39,8 @@ services:
       - redis
       - database
     restart: always
+    labels:
+      - "com.centurylinklabs.watchtower.enable=false"
 
   immich-machine-learning:
     container_name: immich_machine_learning
@@ -49,11 +53,15 @@ services:
     volumes:
       - model-cache:/cache
     restart: always
+    labels:
+      - "com.centurylinklabs.watchtower.enable=false"
 
   redis:
     container_name: immich_redis
     image: registry.hub.docker.com/library/redis:6.2-alpine@sha256:84882e87b54734154586e5f8abd4dce69fe7311315e2fc6d67c29614c8de2672
     restart: always
+    labels:
+      - "com.centurylinklabs.watchtower.enable=false"
 
   database:
     container_name: immich_postgres
@@ -65,6 +73,8 @@ services:
     volumes:
       - ${APP_DATA}/postgres:/var/lib/postgresql/data
     restart: always
+    labels:
+      - "com.centurylinklabs.watchtower.enable=false"
 
 volumes:
   model-cache:

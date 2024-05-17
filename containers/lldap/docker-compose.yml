@@ -33,6 +33,7 @@ services:
       # You can also set a different database:
       - LLDAP_DATABASE_URL=mysql://${MDB_user}:${MDB_pswd}@${MARIADB_IP}/ldap
       #- LLDAP_DATABASE_URL=postgres://postgres-user:password@postgres-server/my-database
+    restart: "unless-stopped"
 
 networks:
   default:
