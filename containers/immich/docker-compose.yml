@@ -25,6 +25,8 @@ services:
       DB_DATABASE_NAME: ${DB_DATABASE_NAME}
     ports:
       - 2283:3001
+    devices:
+      - /dev/dri:/dev/dri
     depends_on:
       - redis
       - database
