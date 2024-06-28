@@ -18,7 +18,7 @@ services:
 #  - sonarr
 #  - lidarr
 #  - bazarr
-  - jellyfin
+#  - jellyfin
 #  - qbittorrent
 #  - synchthing
 #  - home_assistant
@@ -31,4 +31,4 @@ services:
 #  - wireguard
 #  - addguardhome
 #  - autobrr
-#  - immich
+  - immich
