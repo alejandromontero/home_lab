@@ -1,6 +1,6 @@
 ---
 NAS_folder: /mnt/Merged_all/NAS
-Media_folder: "/mnt/External_hhd_1/Media"
+Media_folder: "/mnt/External_hdd_1/NAS/Media"
 Photos_folder: "/mnt/Merged_all/NAS/Photos"
 AppData_folder: /mnt/Internal_ssd_1/AppData
 AppConfig_folder: /mnt/Internal_ssd_1/AppConfig
@@ -18,17 +18,17 @@ services:
 #  - sonarr
 #  - lidarr
 #  - bazarr
-#  - jellyfin
+  - jellyfin
 #  - qbittorrent
 #  - synchthing
 #  - home_assistant
 #  - mariadb
 #  - nextcloud
 #  - nginx_proxy_manager	
-  - lldap
+#  - lldap
 #  - jellyseerr
 #  - pihole
 #  - wireguard
 #  - addguardhome
 #  - autobrr
-  - immich
+#  - immich
