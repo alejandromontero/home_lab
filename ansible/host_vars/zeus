@@ -31,4 +31,5 @@ services:
 #  - wireguard
 #  - addguardhome
 #  - autobrr
-  - immich
+# - immich
+  - homebridge
