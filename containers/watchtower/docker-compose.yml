@@ -1,0 +1,27 @@
+#WatchTower 
+Watchtower:
+  container_name: Watchtower
+  image: containrrr/watchtower
+  command: --debug false --interval 30  --include-restarting true --include-stopped true --cleanup true
+  volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+  labels:
+    - com.centurylinklabs.watchtower.enable=true
+  environment:
+    - TZ=Africa/Johannesburg
+    - WATCHTOWER_POLL_INTERVAL=30
+    - WATCHTOWER_DEBUG=false
+    - WATCHTOWER_CLEANUP=true
+    - WATCHTOWER_INCLUDE_STOPPED=true
+    - WATCHTOWER_INCLUDE_RESTARTING=true
+   # - WATCHTOWER_LABEL_ENABLE=true
+ #   - WATCHTOWER_NOTIFICATIONS=shoutrrr
+  #  - WATCHTOWER_NOTIFICATION_URL=pushover://shoutrrr:<api_key>@<user_key>
+   # - WATCHTOWER_NOTIFICATIONS_LEVEL=info
+    restart: "unless-stopped"
+
+
+networks:
+  default:
+    external: true
+    name: ${NETWORK}

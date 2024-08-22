@@ -32,4 +32,5 @@ services:
 #  - addguardhome
 #  - autobrr
 # - immich
-  - homebridge
+#  - homebridge
+  - watchtower
