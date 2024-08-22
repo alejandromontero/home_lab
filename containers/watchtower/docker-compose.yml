@@ -1,5 +1,4 @@
-#WatchTower 
-Watchtower:
+ Watchtower:
   container_name: Watchtower
   image: containrrr/watchtower
   command: --debug false --interval 30  --include-restarting true --include-stopped true --cleanup true
