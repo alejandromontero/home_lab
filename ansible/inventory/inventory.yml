@@ -3,6 +3,7 @@ services:
     zeus: 
       ansible_host: 10.10.5.50
       ansible_user: admin_user
+      ansible_python_interpreter: /usr/bin/python3
 
 NAS:
   hosts:
@@ -10,5 +11,6 @@ NAS:
       server01:
         ansible_host: 10.10.5.50
         ansible_user: admin_user
+        ansible_python_interpreter: /usr/bin/python3
   vars:
     nfs_exports: [ "/mnt/Merged_all/NAS *(rw,async,no_root_squash)" ]
