@@ -19,6 +19,7 @@
       - vars/pihole.yml
       - vars/wireguard.yml
       - vars/immich.yml
+      - vars/authentik.yml
   roles:
 #    - ansible-role-docker
 #    - ansible-role-portainer

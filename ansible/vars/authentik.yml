@@ -1,0 +1,4 @@
+authentik_DB_password: "Nd5dLLLxL/lfHJ7IblUv6KeTumbdS4s7EZzeuazN/q7UPDeN"
+authentik_secret: "mKnGeDcrhBfVENcRNxfRMg7P91wYhWJSDZQtoBlBV9Ob2t3lerKVrQtx3P/4dU9/g/P0MKRUJKzLwda3%"
+authentik_DB_name: "main_db"
+authentik_DB_username: "authentik_main_user"
