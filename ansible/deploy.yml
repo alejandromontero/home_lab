@@ -13,6 +13,7 @@
 - hosts: services
   become: yes
   vars_files:
+      - vars/common.yml
       - vars/portainer.yml
       - vars/mariadb.yml
       - vars/lldap.yml

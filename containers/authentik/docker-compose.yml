@@ -39,6 +39,20 @@ services:
       AUTHENTIK_POSTGRESQL__NAME: ${AUTHENTIK_DB_NAME}
       AUTHENTIK_POSTGRESQL__PASSWORD: ${AUTHENTIK_DB_PASSWORD}
       AUTHENTIK_SECRET_KEY: ${AUTHENTIK_SECRET_KEY}
+      # SMTP Host Emails are sent to
+      AUTHENTIK_EMAILHOST: smtp.gmail.com
+      AUTHENTIK_EMAILPORT: 587
+      # Optionally authenticate (don't add quotation marks to your password)
+      AUTHENTIK_EMAILUSERNAME: ${MAIL_USERNAME}
+      AUTHENTIK_EMAILPASSWORD: ${MAIL_PASSWORD}
+      # Use StartTLS
+      AUTHENTIK_EMAILUSE_TLS: TRUE
+      # Use SSL
+      AUTHENTIK_EMAILUSE_SSL: FALSE
+      AUTHENTIK_EMAILTIMEOUT: 10
+      # Email address authentik will send from, should have a correct @domain
+      AUTHENTIK_EMAILFROM: ${MAIL_USERNAME}
+
     volumes:
       - ./media:/media
       - ./custom-templates:/templates
@@ -60,6 +74,19 @@ services:
       AUTHENTIK_POSTGRESQL__NAME: ${AUTHENTIK_DB_NAME}
       AUTHENTIK_POSTGRESQL__PASSWORD: ${AUTHENTIK_DB_PASSWORD}
       AUTHENTIK_SECRET_KEY: ${AUTHENTIK_SECRET_KEY}
+      # SMTP Host Emails are sent to
+      AUTHENTIK_EMAILHOST: smtp.gmail.com
+      AUTHENTIK_EMAILPORT: 587
+      # Optionally authenticate (don't add quotation marks to your password)
+      AUTHENTIK_EMAILUSERNAME: ${MAIL_USERNAME}
+      AUTHENTIK_EMAILPASSWORD: ${MAIL_PASSWORD}
+      # Use StartTLS
+      AUTHENTIK_EMAILUSE_TLS: TRUE
+      # Use SSL
+      AUTHENTIK_EMAILUSE_SSL: FALSE
+      AUTHENTIK_EMAILTIMEOUT: 10
+      # Email address authentik will send from, should have a correct @domain
+      AUTHENTIK_EMAILFROM: ${MAIL_USERNAME}
 
     # `user: root` and the docker socket volume are optional.
     # See more for the docker socket integration here:
