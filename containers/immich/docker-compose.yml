@@ -24,7 +24,7 @@ services:
       DB_PASSWORD: ${DB_PASSWORD}
       DB_DATABASE_NAME: ${DB_DATABASE_NAME}
     ports:
-      - 2283:3001
+      - 2283:2283
     devices:
       - /dev/dri:/dev/dri
     depends_on:
