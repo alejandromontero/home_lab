@@ -34,4 +34,5 @@ services:
   # - immich
   # - homebridge
   # - watchtower
-  - authentik
+#  - authentik
+  - navidrome
